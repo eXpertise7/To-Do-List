@@ -1,0 +1,101 @@
+@import "../../../assets/variables";
+
+.component {
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 15px 20px 2px #00000052;
+  border-radius: 6px;
+  padding: 15px;
+
+  .ui-button {
+    width: 100%;
+    border-radius: $borderRadius;
+  }
+
+  .ui-inputtext {
+    width: 100%;
+    margin-right: 5px;
+    border-radius: 0;
+  }
+
+  .ui-inputtext:focus {
+    outline: 1px solid $primaryColor !important;
+    box-shadow: none !important;
+  }
+
+  h3 {
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    height: 475px;
+    padding-right: 10px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      .task {
+        border: 1px solid #d2d2d2;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10px;
+        border-radius: 6px;
+        background: #edf7ff;
+
+        span {
+          font-size: 14px;
+          color: #4a4a4a;
+          font-weight: 500;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #3c86ee;
+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%,
+    color-stop(.5, rgba(255, 255, 255, .2)),
+    color-stop(.5, transparent), to(transparent));
+}
+
+
+@media (max-width: 575px) {
+
+  .component {
+    .ui-button {
+      margin-top: 10px;
+    }
+
+    ul {
+      height: 430px;
+    }
+  }
+}

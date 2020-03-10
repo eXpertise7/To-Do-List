@@ -1,0 +1,16 @@
+
+
+// Colors
+$primaryColor: #FF7C12;
+$secondaryColor: #67C6F8;
+$secondaryColorDark: #3B85EE;
+
+
+@function rem($size) {
+  @return ($size / 16) * 1rem;
+}
+
+// Structural
+$borderRadius: rem(6);
+
+
